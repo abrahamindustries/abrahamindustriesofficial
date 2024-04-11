@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/test.css" />
+    <style>
+      /* Add styles for modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+      }
+
+      .modal-content {
+        background-color: #92aa27;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #810a0a;
+        width: 80%;
+      }
+
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #fdfdfd;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">ABRAHAM INDUSTRIES</div>
+      <div class="nav-items">
+        <a href="#" onclick="return false;">Home</a>
+        <a href="#" onclick="return false;">About</a>
+        <a href="#" onclick="displayContactModal();">Contact</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="column-left">
+          <h1>Welcome</h1>
+          <p>
+            The Team of Peacekeeping Initiatives has emerged
+             to save the world from technological scams and
+              harmful websites that are spreading worldwide.
+          </p>
+          <button id="getStartedBtn" onclick="displayGetStartedModal();">Get Started</button>
+        </div>
+        <div class="column-right">
+          <img src="pictures/shaunsi.svg" alt="illustration" class="hero-image" style="fill: #000;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Started Modal -->
+    <div id="getStartedModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeGetStartedModal();">&times;</span>
+        <h2>INTRODUCTION TO PROJECT CAIMEO</h2>
+        <p>
+          A wave of terror has swept across the globe, awakening most parts of
+          the world to conflict, deaths, rapes, murders, wars, and scams
+          specifically targeting the middle class. The world is in chaos, and
+          the need for a solution has never been more urgent.
+        </p>
+        <p>
+          But fear not, as a beacon of hope has emerged in the form of CAIMEO
+          AI, introduced by Abraham Industries. This revolutionary technology is
+          set to restart the AI and punch back into the new show, with the goal
+          of preserving peace and harmony.
+        </p>
+        <p>
+          CAIMEO AI is more than just an artificial intelligence system; it's a
+          complete solution to the world's problems. With its advanced
+          capabilities, CAIMEO AI will be able to identify and neutralize
+          threats before they escalate, providing a safer and more secure world
+          for all. CAIMEO stands for Cognizant Artificial Intelligence
+          Monitoring and Enforcement Officer.
+        </p>
+        <p>
+          Not only will CAIMEO AI help to prevent conflicts and crimes, but it
+          will also work to promote peace and harmony among people from all
+          walks of life. By analyzing data and identifying patterns, CAIMEO AI
+          will be able to provide insights and recommendations for promoting
+          understanding and cooperation between different cultures, religions,
+          and communities.
+        </p>
+        <p>
+          The world has never seen anything like CAIMEO AI before, and its
+          potential to change the course of history is enormous. With this
+          technology, we can finally begin to heal the wounds of the past and
+          build a brighter future for generations to come.
+        </p>
+        <p>
+          So, let us all welcome the arrival of CAIMEO AI and embrace the hope
+          it brings. Together, we can punch back against the nightmare that has
+          awakened the world and create a future that is characterized by peace,
+          harmony, and prosperity for all.
+        </p>
+        <p>
+          Experience the power of CAIMEO AI for yourself by watching the
+          official trailer on YouTube. Prepare to be amazed by the capabilities
+          of this revolutionary technology and join us in the fight to preserve
+          peace and harmony in the world. We need Investors and Programmers who can help us
+          to grow this company.Please feel free to contact us.
+          <p>
+            <a
+              href="https://youtu.be/FE87UnMuO-I?si=dSiWiw-nuGdGM5UJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Watch Official Trailer</a
+            >
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeContactModal();">&times;</span>
+        <h2>CONTACT US</h2>
+        <p>Feel free to contact us through this Email ID:</p>
+        <p>Email id - <a href="mailto:abrahamindustriesworkspace@gmail.com">abrahamindustriesworkspace@gmail.com</a></p>
+      </div>
+    </div>
+
+    <script>
+      // Get the Get Started modal
+      var getStartedModal = document.getElementById("getStartedModal");
+
+      // Get the Contact modal
+      var contactModal = document.getElementById("contactModal");
+
+      // Function to display the Get Started modal
+      function displayGetStartedModal() {
+        getStartedModal.style.display = "block";
+      }
+
+      // Function to close the Get Started modal
+      function closeGetStartedModal() {
+        getStartedModal.style.display = "none";
+      }
+
+      // Function to display the Contact modal
+      function displayContactModal() {
+        contactModal.style.display = "block";
+      }
+
+      // Function to close the Contact modal
+      function closeContactModal() {
+        contactModal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == getStartedModal) {
+          closeGetStartedModal();
+        }
+        if (event.target == contactModal) {
+          closeContactModal();
+        }
+      };
+    </script>
+  </body>
+</html>
